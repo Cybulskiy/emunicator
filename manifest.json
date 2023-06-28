@@ -1,0 +1,15 @@
+{
+  "name": "Keyboard",
+  "short_name": "Keyboard",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "white",
+  "theme_color": "gray",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/images/icon.png",
+      "type": "image/png", "sizes": "512x512"
+    }
+  ]
+}
