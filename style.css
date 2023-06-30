@@ -1,27 +1,45 @@
 body {
+  margin: 0;
   font-family: Arial, Helvetica, sans-serif
 }
 
 button {
   all: unset;
   font-size: 80px;
-  height: 100px;
+  height: 120px;
   line-height: 1;
   border: 1px solid gray;
   width: 120px;
   text-align: center;
   border-radius: 24px;
-  margin: 4px 4px;
+  margin: 10px 10px;
 }
 
-button.red {
-  color: red;
+body {
+  touch-action: manipulation;
+}
+
+.remove {
+  background-color: lightpink;
 }
 
 .text-container {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+}
+
+.text {
+  flex: 1;
+  color: blue;
+  font-size: 120px;
+  line-height: 140px;
+  white-space: nowrap;                   
+  overflow: hidden;
+  width: 200px;
+  direction: rtl;
+  text-align: left;
+  margin: 0 10px;
 }
 
 .keyboard-container {
@@ -30,10 +48,6 @@ button.red {
   justify-content: center;
 }
 
-.text {
-  color: blue;
-  font-size: 100px;
-}
 
 .key {
   line-height: 1;
@@ -41,8 +55,14 @@ button.red {
   min-width: 80px;
   margin: 4px;
   border-radius: 24px;
-  font-size: 150px;
+  font-size: calc((100vh - 100px) / 8);
   font-weight: 500;
   text-align: center;
   background-color: rgba(0,0,0,0.05);
+  -webkit-user-select: none; /* Safari */
+  user-select: none; /* Standard syntax */
+}
+
+.space {
+  min-width: 200px;
 }

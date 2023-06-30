@@ -1,15 +1,29 @@
-console.log("JS")
+var text = "";
+
+document.addEventListener("DOMContentLoaded", function (event) {
+  const keys = document.querySelectorAll(".key")
+  for (i = 0; i < keys.length; i++) {
+    keys[i].addEventListener("click", onKeyPress);
+  }
+  document.querySelector(".remove").addEventListener("click", onRemoveText);
+  document.querySelector(".backspace").addEventListener("click", onRemoveLast);
+});
+
+function setText() {
+  document.getElementById("text").innerHTML = text;
+}
 
 function onKeyPress(event) {
-  var text = document.getElementById("text").innerHTML;
-  document.getElementById("text").innerHTML = text + event.target.innerHTML
+  text = text + event.target.innerHTML;
+  setText(text);
 }
 
 function onRemoveText() {
-  document.getElementById("text").innerHTML = ""
+  text = "";
+  setText();
 }
 
 function onRemoveLast() {
-  var text = document.getElementById("text").innerHTML;
-  document.getElementById("text").innerHTML = text.substring(0,text.length-1)
+  text = text.substring(0, text.length - 1);
+  setText();
 }
